@@ -1,15 +1,14 @@
 {
-  "name": "prepr-nuxt",
+  "name": "@preprio/nuxtjs-sdk",
   "version": "1.0.0",
   "description": "The official Prepr SDK for Nuxt.js",
   "main": "lib/module.js",
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "abort-controller": "^3.0.0",
-    "node-fetch": "^2.6.1"
-  },
   "devDependencies": {
     "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "@preprio/nodejs-sdk": "^1.0.0"
   }
 }

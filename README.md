@@ -16,7 +16,7 @@ And navigate to your new site
 
 Once you've done that, you can simply install the module by running
 
-`npm i prepr-nuxt`
+`npm i @preprio/nuxtjs-sdk`
 
 ### Configuration
 
@@ -28,12 +28,13 @@ Okay, now we can register the module inside `nuxt.config.js` and modify the defa
 export default {
   // Settings...
 
-  modules: ['prepr-nuxt'],
+  modules: ['@preprio/nuxtjs-sdk],
 
   prepr: {
-    baseUrl: 'https://api.eu1.prepr.io', // Default
-    token: '<YOUR_ACCES_TOKEN>', // Required
-    timeout: 4000, // Default
+    token = null,
+    baseUrl = 'https://cdn.prepr.io',
+    timeout = 4000,
+    userId = null,
   },
 }
 ```
