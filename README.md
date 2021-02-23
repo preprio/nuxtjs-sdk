@@ -39,8 +39,6 @@ export default {
 }
 ```
 
-By default, the base url will be `https://api.eu1.prepr.io` and the timeout before the request fails `4000` ms. The two values are not required. However. The `token` is required in order to make API calls. You can obtain the API token from the Prepr Dashboard.
-
 ## Usage
 
 Cool. We have the module working. Now, time for some action. We now have global access to the `$prepr` function, how we can access the `$prepr` function depends on the context. Here are two examples.
@@ -52,31 +50,10 @@ Cool. We have the module working. Now, time for some action. We now have global 
 export default {
   async asyncData({ $prepr, params }) {
     const { id } = params
-    const publication = await $prepr(`/publications/${id}`, {
-      query: `
-        items {
-          header_image {
-            cdn_files {
-              resized {
-                thumb.w(1280).h(720)
-              }
-            }
-          },
-          elements {
-            cover {
-              cdn_files {
-                resized {
-                  thumb.w(1920)
-                }
-              }
-            }
-          }
-        },
-        title,
-        tags,
-        model
-      `
-    })
+    const publication = await $prepr
+      .path(`/publications/${id}`)
+      .query('...')
+      .fetch();
 
     return {
       publication,
@@ -99,31 +76,10 @@ export default {
 
   async fetch() {
     const { id } = this.params
-    const publication = await this.$prepr(`/publications/${id}`, {
-      query: `
-        items {
-          header_image {
-            cdn_files {
-              resized {
-                thumb.w(1280).h(720)
-              }
-            }
-          },
-          elements {
-            cover {
-              cdn_files {
-                resized {
-                  thumb.w(1920)
-                }
-              }
-            }
-          }
-        },
-        title,
-        tags,
-        model
-      `
-    })
+    const publication = await this.$prepr
+      .path(`/publications/${id}`)
+      .query('...')
+      .fetch()
 
     this.publication = publication
   },
@@ -131,14 +87,6 @@ export default {
 </script>
 ```
 
-## Available parameters
+## More info
 
-In the previous examples you can see how queries are executed and how `$prepr` is used in different contexts. Aside from `query`, you can also pass along a `sort` and `limit` parameter. With sort you can specify the sorting order by column, and with limit you can specify the maximum amount of records you wish to receive.
-
-```js
-const publication = await this.$prepr(`/publications/${id}`, {
-  query: `...`,
-  limit: 4,
-  sort: 'title',
-})
-```
+Want to know all available methods? Read more at [@preprio/nodejs-sdk](https://prepr.dev/docs/technologies/v1/introduction-node).
