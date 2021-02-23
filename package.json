@@ -9,6 +9,6 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
-    "@preprio/nodejs-sdk": "^1.0.0"
+    "@preprio/nodejs-sdk": "^1.0.1"
   }
 }
