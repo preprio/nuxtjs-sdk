@@ -28,7 +28,7 @@ Okay, now we can register the module inside `nuxt.config.js` and modify the defa
 export default {
   // Settings...
 
-  modules: ['@preprio/nuxtjs-sdk],
+  modules: ['@preprio/nuxtjs-sdk'],
 
   prepr: {
     token = null,
