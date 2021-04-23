@@ -20,7 +20,8 @@ Once you've done that, you can simply install the module by running
 
 ### Configuration
 
-Okay, now we can register the module inside `nuxt.config.js` and modify the default settings
+Okay, now we can register the module inside `nuxt.config.js` and modify the default settings.
+Add your access token in the token field of the configuration and add the modules and prepr section.
 
 ```js
 // nuxt.config.js
