@@ -26,15 +26,17 @@ Okay, now we can register the module inside `nuxt.config.js` and modify the defa
 // nuxt.config.js
 
 export default {
-  // Settings...
 
-  modules: ['@preprio/nuxtjs-sdk'],
+  modules: [
+    '@preprio/nuxtjs-sdk'
+  ],
 
+  // Prepr API Configuration
   prepr: {
-    token = null,
-    baseUrl = 'https://cdn.prepr.io',
-    timeout = 4000,
-    userId = null,
+    token: null,
+    baseUrl: 'https://cdn.prepr.io',
+    timeout: 4000,
+    userId: null,
   },
 }
 ```
