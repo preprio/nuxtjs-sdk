@@ -34,7 +34,7 @@ export default {
 
   // Prepr API Configuration
   prepr: {
-    token: null,
+    token: 'db126-EXAMPLE-2fd2ce2feee70b0846-EXAMPLE-16842bc97b36b89191b',
     baseUrl: 'https://cdn.prepr.io',
     timeout: 4000,
     userId: null,
