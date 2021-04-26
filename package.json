@@ -1,6 +1,6 @@
 {
   "name": "@preprio/nuxtjs-sdk",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "The official Prepr SDK for Nuxt.js",
   "main": "lib/module.js",
   "author": "",
